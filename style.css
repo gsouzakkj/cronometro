@@ -1,11 +1,19 @@
 /* styles.css */
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('DS-DIGIT.TTF') format('truetype');
+}
+
+body {
+    font-family: 'DS-Digital', sans-serif;
+}
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'fonte', sans-serif; /* Fonte similar a de relógios digitais */
+    font-family: 'DS-Digital', sans-serif; /* Fonte similar a de relógios digitais */
     background-color: #000; /* Tela totalmente preta */
     color: rgb(255, 0, 0); /* Texto em vermelho */
 }
@@ -43,12 +51,4 @@ button {
 button:disabled {
     background-color: #5a5a5a;
     cursor: not-allowed;
-}
-@font-face {
-    font-family: 'DS-Digital';
-    src: url('DS-DIGIT.TTF') format('truetype');
-}
-
-body {
-    font-family: 'DS-Digital', sans-serif;
 }
