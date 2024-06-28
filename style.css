@@ -5,9 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Orbitron', sans-serif; /* Fonte similar a de relógios digitais */
+    font-family: 'fonte', sans-serif; /* Fonte similar a de relógios digitais */
     background-color: #000; /* Tela totalmente preta */
-    color: red; /* Texto em vermelho */
+    color: rgb(255, 0, 0); /* Texto em vermelho */
 }
 
 #container {
@@ -36,7 +36,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: #740e0e;
     color: #fff;
 }
 
