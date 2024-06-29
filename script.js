@@ -47,7 +47,7 @@ function pauseTimer() {
 
 function resetTimer() {
     clearInterval(intervalId);
-    isRunning = false;
+    isRunning = true;
     timeRemaining = totalTime;
     updateTimerDisplay();
     startSound.pause(); // Pausa a música quando resetado
