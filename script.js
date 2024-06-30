@@ -8,7 +8,6 @@ let resetBtn = document.getElementById('resetBtn');
 
 // Seleciona os elementos de áudio pelo ID
 let startSound = document.getElementById('startSound');
-let endSound = document.getElementById('endSound');
 let tickSound = document.getElementById('tickSound');
 let alarmSound = document.getElementById('alarmSound');
 
@@ -37,7 +36,7 @@ function startTimer() {
             isRunning = false; // Marca que o cronômetro não está mais rodando
             stopAllSounds(); // Para todos os sons
             alarmSound.play(); // Toca o som do alarme
-            setTimeout(() => alarmSound.pause(), 5000); // Para o alarme após 5 segundos
+            setTimeout(() => alarmSound.pause(), 5000); // Pausa o alarme após 5 segundos
         } else if (timeRemaining === 60) { // Se restar um minuto
             startSound.pause(); // Pausa a música de início
             tickSound.play(); // Toca o som de tic-tac
@@ -76,8 +75,6 @@ function stopAllSounds() {
     startSound.currentTime = 0; // Reinicia a música do começo
     tickSound.pause(); // Pausa o som de tic-tac
     tickSound.currentTime = 0; // Reinicia o som de tic-tac do começo
-    endSound.pause(); // Pausa o som de fim (se estiver tocando)
-    endSound.currentTime = 0; // Reinicia o som de fim do começo
     alarmSound.pause(); // Pausa o alarme (se estiver tocando)
     alarmSound.currentTime = 0; // Reinicia o alarme do começo
 }
