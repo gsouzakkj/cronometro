@@ -19,10 +19,10 @@ let isRunning = false; // Estado do cronômetro, se está rodando ou não
 
 // Atualiza a exibição do cronômetro no formato MM:SS
 function updateTimerDisplay() {
-    let minutes = Math.floor(timeRemaining / 60); // Calcula os minutos
-    let seconds = timeRemaining % 60; // Calcula os segundos
-    if (seconds < 10) seconds = '0' + seconds; // Adiciona zero à esquerda se necessário
-    timerElement.textContent = ${minutes}:${seconds}; // Atualiza o elemento HTML com o tempo formatado
+    let minutes = Math.floor(timeRemaining / 60);
+    let seconds = timeRemaining % 60;
+    if (seconds < 10) seconds = '0' + seconds;
+    timerElement.textContent = `${minutes}:${seconds}`;
 }
 
 // Função para iniciar o cronômetro
