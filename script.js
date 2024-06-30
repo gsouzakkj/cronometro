@@ -85,7 +85,7 @@ function stopAllSounds() {
 // Função para atualizar o estado dos botões
 function toggleButtons() {
     startBtn.disabled = isRunning; // Desabilita o botão "Iniciar" se o cronômetro está rodando
-    pauseBtn.disabled = isRunning; // Desabilita o botão "Pausar" se o cronômetro não está rodando
+    pauseBtn.disabled = !isRunning; // Desabilita o botão "Pausar" se o cronômetro não está rodando
     resetBtn.disabled = isRunning; // Desabilita o botão "Resetar" se o cronômetro está rodando
 }
 
@@ -97,5 +97,4 @@ resetBtn.addEventListener('click', resetTimer); // Reseta o cronômetro quando c
 // Inicializa a exibição do cronômetro
 updateTimerDisplay();
 
-// Inicializa os botões com os estados corretos
-toggleButtons();
+// Inicializa os botões com os 
