@@ -97,4 +97,5 @@ resetBtn.addEventListener('click', resetTimer); // Reseta o cronômetro quando c
 // Inicializa a exibição do cronômetro
 updateTimerDisplay();
 
-// Inicializa os botões com os 
+// Inicializa os botões com os estados corretos
+toggleButtons();
