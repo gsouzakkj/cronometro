@@ -22,7 +22,7 @@ function updateTimerDisplay() {
     let minutes = Math.floor(timeRemaining / 60); // Calcula os minutos
     let seconds = timeRemaining % 60; // Calcula os segundos
     if (seconds < 10) seconds = '0' + seconds; // Adiciona zero à esquerda se necessário
-    timerElement.textContent = ${minutes}:${seconds}; // Atualiza o elemento HTML com o tempo formatado
+    timerElement.textContent = '${minutes}:${seconds};' // Atualiza o elemento HTML com o tempo formatado
 }
 
 // Função para iniciar o cronômetro
