@@ -40,7 +40,7 @@ function startTimer() {
             alarmSound.play(); // Toca o som do alarme
             setTimeout(() => {
                 tickSound.pause(); // Pausa o som de tic-tac
-                alarmSound.pause(); // Pausa o alarme
+                alarmSound.play(); // Pausa o alarme
                 alarmSound.currentTime = 0; // Reinicia o alarme do começo
             }, 7000); // Pausa os sons após 7 segundos
         } else if (timeRemaining === 60) { // Se restar um minuto
