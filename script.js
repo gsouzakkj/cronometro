@@ -34,13 +34,10 @@ function startTimer() {
         if (timeRemaining <= 0) { // Se o tempo acabou
             clearInterval(intervalId); // Para o cronômetro
             isRunning = false; // Marca que o cronômetro não está mais rodando
-            timeRemaining = 0; // Garante que o tempo restante não fique negativo
-            updateTimerDisplay(); // Atualiza a exibição do cronômetro
-            stopAllSounds(); // Para todos os sons
             alarmSound.play(); // Toca o som do alarme
             setTimeout(() => {
                 tickSound.pause(); // Pausa o som de tic-tac
-                alarmSound.play(); // Pausa o alarme
+                alarmSound.pause(); // Pausa o alarme
                 alarmSound.currentTime = 0; // Reinicia o alarme do começo
             }, 7000); // Pausa os sons após 7 segundos
         } else if (timeRemaining === 60) { // Se restar um minuto
