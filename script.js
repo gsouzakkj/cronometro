@@ -12,7 +12,7 @@ let tickSound = document.getElementById('tickSound');
 let alarmSound = document.getElementById('alarmSound');
 
 // Define o tempo total do cronômetro em segundos (15 minutos = 15 * 60 segundos)
-let totalTime = 15 * 60; // 15 minutos em segundo
+let totalTime = 2 * 60; // 15 minutos em segundo
 let timeRemaining = totalTime; // Tempo restante começa igual ao tempo total
 let intervalId; // ID do intervalo para o setInterval
 let isRunning = false; // Estado do cronômetro, se está rodando ou não
@@ -34,9 +34,12 @@ function startTimer() {
         if (timeRemaining <= 0) { // Se o tempo acabou
             clearInterval(intervalId); // Para o cronômetro
             isRunning = false; // Marca que o cronômetro não está mais rodando
+            timeRemaining = 0; // Garante que o tempo restante não fique negativo
+            updateTimerDisplay(); // Atualiza a exibição do cronômetro
             stopAllSounds(); // Para todos os sons
             alarmSound.play(); // Toca o som do alarme
             setTimeout(() => alarmSound.pause(), 5000); // Pausa o alarme após 5 segundos
+            toggleButtons(); // Atualiza o estado dos botões
         } else if (timeRemaining === 60) { // Se restar um minuto
             startSound.pause(); // Pausa a música de início
             tickSound.play(); // Toca o som de tic-tac
