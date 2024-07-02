@@ -12,7 +12,7 @@ let tickSound = document.getElementById('tickSound');
 let alarmSound = document.getElementById('alarmSound');
 
 // Define o tempo total do cronômetro em segundos (15 minutos = 15 * 60 segundos)
-let totalTime = 15 * 60; // 15 minutos em segundos
+let totalTime = 2 * 60; // 15 minutos em segundo
 let timeRemaining = totalTime; // Tempo restante começa igual ao tempo total
 let intervalId; // ID do intervalo para o setInterval
 let isRunning = false; // Estado do cronômetro, se está rodando ou não
