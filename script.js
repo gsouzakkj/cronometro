@@ -34,6 +34,8 @@ function startTimer() {
         if (timeRemaining <= 0) { // Se o tempo acabou
             clearInterval(intervalId); // Para o cronômetro
             isRunning = false; // Marca que o cronômetro não está mais rodando
+            timeRemaining = 0; // Garante que o tempo restante não fique negativo
+            updateTimerDisplay(); // Atualiza a exibição do cronômetro
             stopAllSounds(); // Para todos os sons
             alarmSound.play(); // Toca o som do alarme
             setTimeout(() => {
